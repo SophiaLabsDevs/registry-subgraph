@@ -1,0 +1,21 @@
+type ERC6551AccountCreated @entity(immutable: true) {
+  id: Bytes!
+  account: Bytes! # address
+  implementation: Bytes! # address
+  salt: Bytes! # bytes32
+  chainId: BigInt! # uint256
+  tokenContract: Bytes! # address
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
